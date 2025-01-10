@@ -1,0 +1,14 @@
+Resources:
+  ElasticBeanstalkEnvironment:
+    Type: AWS::ElasticBeanstalk::Environment
+    Properties:
+      ApplicationName: DevOps50-App
+      EnvironmentName: DevOps50-Env
+      SolutionStackName: 64bit Amazon Linux 2023 v4.3.2 running Python 3.9
+      OptionSettings:
+        - Namespace: aws:autoscaling:launchconfiguration
+          OptionName: IamInstanceProfile
+          Value: aws-elasticbeanstalk-ec2-role
+        - Namespace: aws:elasticbeanstalk:environment
+          OptionName: EnvironmentType
+          Value: SingleInstance

@@ -1,0 +1,33 @@
+{
+    "ApplicationName": "DevOps70-App",
+    "EnvironmentName": "DevOps70-Env",
+    "SolutionStackName": "64bit Amazon Linux 2023 v4.3.2 running Python 3.9",
+    "OptionSettings": [
+        {
+            "Namespace": "aws:autoscaling:launchconfiguration",
+            "OptionName": "InstanceType",
+            "Value": "t2.micro"
+        },
+        {
+            "Namespace": "aws:autoscaling:launchconfiguration",
+            "OptionName": "IamInstanceProfile",
+            "Value": "aws-elasticbeanstalk-ec2-role"
+        },
+        {
+            "Namespace": "aws:elasticbeanstalk:environment",
+            "OptionName": "EnvironmentType",
+            "Value": "SingleInstance"
+        },
+        {
+            "Namespace": "aws:ec2:vpc",
+            "OptionName": "VPCId",
+            "Value": "vpc-015e0a931f61702fc"
+        },
+        {
+            "Namespace": "aws:ec2:vpc",
+            "OptionName": "Subnets",
+            "Value": "subnet-02c79bd75945ace90"
+        }
+    ]
+}
+
